@@ -1,0 +1,14 @@
+# Build output
+/build/
+build/
+cmake-build-*/
+
+# Compiled objects and binaries
+*.o
+*.obj
+*.exe
+recognize
+
+# Editor / OS cruft
+.idea/
+.DS_Store
