@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(OpenCV REQUIRED)
 
 # Build one executable named "recognize" from our source files
-add_executable(recognize src/main.cpp src/load_image.cpp)
+add_executable(recognize src/main.cpp src/load_image.cpp src/pixel_matrix.cpp)
 
 # Tell the compiler where to find headers, and which libraries to link
 target_include_directories(recognize PRIVATE include ${OpenCV_INCLUDE_DIRS})
