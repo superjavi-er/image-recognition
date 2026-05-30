@@ -31,6 +31,10 @@ int main() {
         std::vector<double> projected = project_to_eigenspace(test_pixels, test_basis);
         std::cout << "Projection test: [" << projected[0] << ", " << projected[1] << "]\n";
         std::cout << "Expected:        [1, 7]\n";
+
+        std::string hash = compute_hash(projected);
+        std::cout << "Hash: " << hash << "\n";
+
     }
     catch (const std::exception& e) {
         std::cerr << e.what() << "\n";
