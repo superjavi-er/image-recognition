@@ -35,6 +35,15 @@ int main() {
         std::string hash = compute_hash(projected);
         std::cout << "Hash: " << hash << "\n";
 
+        // Test get_training_path
+        std::string mnist_path = "/Users/javierrivero/Dev/datasets/mnist-pngs";
+        std::vector<std::string> training_paths = get_training_path(mnist_path, 10);
+
+        std::cout << "Training paths: " << training_paths.size() << "\n";
+        std::cout << "First: " << training_paths.front() << "\n";
+        std::cout << "Last:  " << training_paths.back() << "\n";
+
+
     }
     catch (const std::exception& e) {
         std::cerr << e.what() << "\n";
