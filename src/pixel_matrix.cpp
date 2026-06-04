@@ -2,6 +2,7 @@
 #include<opencv2/imgproc.hpp>
 #include<vector>
 
+
 Matrix to_pixel_matrix(const cv::Mat& image) {
     cv::Mat gray;
     cv::cvtColor(image,gray, cv::COLOR_BGR2GRAY);
