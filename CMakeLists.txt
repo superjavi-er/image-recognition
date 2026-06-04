@@ -19,7 +19,7 @@ set(SHARED_SOURCES
 
 add_executable(recognize src/recognize_main.cpp ${SHARED_SOURCES})
 add_executable(train     src/train_main.cpp     ${SHARED_SOURCES})
-
+add_executable(test      tests/test_pipeline.cpp  ${SHARED_SOURCES})
 
 # Tell the compiler where to find headers, and which libraries to link
 target_include_directories(recognize PRIVATE include ${OpenCV_INCLUDE_DIRS})
@@ -27,3 +27,6 @@ target_link_libraries(recognize PRIVATE ${OpenCV_LIBS} Eigen3::Eigen)
 
 target_include_directories(train PRIVATE include ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(train PRIVATE ${OpenCV_LIBS} Eigen3::Eigen)
+
+target_include_directories(test PRIVATE include ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(test PRIVATE ${OpenCV_LIBS} Eigen3::Eigen)
